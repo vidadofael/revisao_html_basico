@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formulários</title>
+	<meta charset="utf-8">
+
+</head>
+
+<body>
+
+	<h1>Neste capítulo valos aprender a criar formulários.</h1>
+	<p>Formulários servem para, por exemplo: capturar dados do cliente, fazer login em algum sistema ou site, impedir que quem são tenha acesso, não entre em sites privados dentre outras...
+	</p>
+	<p>Vamos aprender também a criar formulários para cadastro.</p>
+	<hr>
+	<p>A tag ultilizada para criar um formulário é a tag "form", dentro dela é possível abrir outra tag "input" onde você precisa colocar os atributos dos campos.Exemplo:</p>
+		<h2>Login</h2>
+			<form>
+				Login:<br>
+				<input type="" name="">
+
+			</form>
+	<p><img src="imagens/captura1.png"></p>
+	<p>No atrubuto de "name" por enquanto não se coloca nada pois ele serve para capturar os dados do usuário por uma linguagem de programação e depois processá-los. </p>
+	<hr>
+
+		<h2>Login com senha</h2>
+		<p>Usa se a tag input pois são os dados que serão incluídos aqui, irão passar por um processamento em linguagem de programação que veremos em um outro módulo.</p>
+			<form>
+				Login:<br>
+				<input type="text" name=""><br>
+				Senha:<br>
+				<input type="password" name="">
+			</form>
+
+	<p><img src="imagens/captura2.png"></p>
+	<p>Veja que o type da senha agora é "password. Com isso, quando o usuário for digitar a senha, ela não aparece, o que aparece são dígitos escondidos por pontos. Se quiser que apareça a senha enquanto digita, basta trocar o password por text.</p>
+	<p>Relembrando que a tag "br" é usada sempre quando há necessidade de colocar um espaço entre os elementos.</p>
+	<hr>
+	<h2>Incluindo um botão</h2>
+				<form>
+				Login:<br>
+				<input type="text" name=""><br>
+				Senha:<br>
+				<input type="password" name=""><br><br>
+				<input type="submit" value="logar" name="">
+			</form>
+	<p><img src="imagens/captura3.png"></p>
+	<p>Para incluir um botão no formulário de login basta usar a tag imput com o atributo type="submit" e colocar também o atrubuto "value=logar" para que o botão tenha o nome impresso nele, indicando ao usuário onde ele tem que clicar para processar os dados inseridos.</p>
+	<hr>
+	<h1>Como fazer uma tela de cadastro</h1>
+
+	<h2>Cadastro</h2>
+			Login:<br>
+				<input type="text" name=""><br>
+				sexo: <br>
+				<input type="radio" name="">Masculino <br>
+				<input type="radio" name="">Feminino <br>
+		<p>Para fazer um cadastro basta usar a tag input, depois definir o que o usuário vai marcar, no exemplo acima, o sexo, e depois colocar os atributos, neste caso usaremos o radio que são botões circulares para selecionar.</p>
+	<p><img src="imagens/captura4.png"></p>
+	<hr>
+
+	<h2>Cadastro</h2>
+			Login:<br>
+				<input type="text" name=""><br>
+				sexo: <br>
+				<input type="radio" name="sexo" value="M">Masculino <br>
+				<input type="radio" name="sexo" value="F">Feminino <br>
+
+			<p>Neste caso não definimos ainda o comportamento do botão de seleção, pois como está o usuário vai poder selecionar os 2 botões e ambos não poderiam ser desmarcados, por isso deve-se formatar as configurações lá nos atributos. Essa configuração é bem simples, basta preencer o atributo name="" por sexo, assim o usuário clica em ambos mas os dois não ficam igualmente selecionados. Depois disso deve-se definir o "value" para que essa informação seja capturada por uma linguagem de programação e processar.</p>
+	<p><img src="imagens/captura5.png"></p>
+	<hr>
+
+	<h2>Mais sobre cadastros:</h2>
+	<h2>Cadastro</h2>
+			Login:<br>
+				<input type="text" name=""><br><br>
+				sexo: <br>
+				<input type="radio" name="sexo" value="M">Masculino <br>
+				<input type="radio" name="sexo" value="F">Feminino <br><br>
+
+				Interesses <br>
+				<input type="checkbox" name="interesses">Futebol<br>
+				<input type="checkbox" name="interesses">Livros<br>
+				<input type="checkbox" name="interesses">Gameplay<br>
+				<input type="checkbox" name="interesses">Viagens<br>
+	<p>No caso de interesses pode se colocar vários pontos de interesses para o cliente selecionar, sem ter a necessidade de limitar os botões pela quantidade preenxida. Lembre se que deve colocar o atributo "name" para que essa informação possa ser resgatada pela linguagem de programação para que seja armazenada e processada.</p>
+	<p><img src="imagens/captura6.png"></p>
+	<hr>
+	<h2>Usando o select em cadastro</h2>
+	<h2>Cadastro</h2>
+		Estado <br>
+		<select>
+			<option>AC</option>
+			<option>AL</option>
+			<option>AP</option>
+			<option>AM</option>
+			<option>BA</option>
+			<option>CE</option>
+			<option>ES</option>
+			<option>GO</option>
+			<option>MA</option>
+			<option>MT</option>
+			<option>MS</option>
+			<option>MG</option>
+			<option>PA</option>
+			<option>PB</option>
+			<option>PR</option>
+			<option>PE</option>
+			<option>PI</option>
+			<option>RJ</option>
+			<option>RN</option>
+			<option>RS</option>
+			<option>RO</option>
+			<option>RR</option>
+			<option>SC</option>
+			<option>SP</option>
+			<option>SE</option>
+			<option>TO</option>
+			<option>DF</option>
+
+		</select>
+		<p><img src="imagens/captura7.png"></p>
+	<p>Neste caso usamos uma lista de estados para que o usuário selecione. Para não ficar todas as opções a mostra, é melhor fazer uma lista onde ele escolhe e aparece somente o que ele escolheu.</p>
+	<br>
+	<p>Para guardar a informação do estado para que uma linguagem de programação possa trabalhar com esses valores selecionados aqui basta declarar uma "value" dentro das opções de select:</p>
+	<br>
+	Estado <br>
+		<select name="estado">
+			<option value="ac">AC</option>
+			<option value="al">AL</option>
+			<option value="ap">AP</option>
+			<option value="am">AM</option>
+			<option value="ba">BA</option>
+			<option value="ce">CE</option>
+			<option value="es">ES</option>
+			<option value="go">GO</option>
+			<option value="ma">MA</option>
+			<option value="mt">MT</option>
+			<option value="ms">MS</option>
+			<option value="mg">MG</option>
+			<option value="pa">PA</option>
+			<option value="pb">PB</option>
+			<option value="pr">PR</option>
+			<option value="pe">PE</option>
+			<option value="pi">PI</option>
+			<option value="rj">RJ</option>
+			<option value="rn">RN</option>
+			<option value="rs">RS</option>
+			<option value="ro">RO</option>
+			<option value="rr">RR</option>
+			<option value="sc">SC</option>
+			<option value="sp">SP</option>
+			<option value="se">SE</option>
+			<option value="to">TO</option>
+			<option value="df">DF</option>
+
+		</select>
+		<p><img src="imagens/captura8.png"></p>
+	<hr><br>
+	<p>Para definir uma parea onde o usuário pode escrever livremente ou uma área de corpo de e-mail, por exemplo, usa se a tag "textarea"</p><br>
+
+	Observações: <br>
+	<textarea></textarea>
+	<p><img src="imagens/captura9.png"></p>
+
+	<p>Para colocar um botão de enviar ou cadastrar, basta incluir a tag input para o botão. Isso fará com que o código reconheça esse comando de submeter e enviar o formulário pra onde desejar a funcionalidade.</p>
+
+	Observações: <br>
+	<textarea></textarea><br>
+	<input type="submit" value="enviar"><br>
+	<p><img src="imagens/captura10.png"></p>
+
+
+
+	<hr>
+
+
+
+</body>
+
+
+</html>
